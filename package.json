@@ -1,0 +1,39 @@
+{
+  "name": "pinia-lifecycle",
+  "version": "1.1.0",
+  "description": "pinia lifecycle management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc",
+    "build": "tsc"
+  },
+  "keywords": [
+    "pinia",
+    "lifecycle",
+    "sen",
+    "ones",
+    "vue",
+    "vue3"
+  ],
+  "types": "./dist/src/pinia-lifecycle.d.ts",
+  "author": "sen",
+  "license": "MIT",
+  "devDependencies": {
+    "pinia": "^2.0.33",
+    "vue-router": "^4.1.6"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senyuanzi/pinia-lifecycle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/senyuanzi/pinia-lifecycle/issues"
+  },
+  "homepage": "https://github.com/senyuanzi/pinia-lifecycle#readme"
+}
