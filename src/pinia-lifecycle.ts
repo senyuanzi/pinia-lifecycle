@@ -1,5 +1,5 @@
 
-import { createPinia, type PiniaPluginContext } from "pinia";
+import { PiniaPlugin, type PiniaPluginContext } from "pinia";
 import { useRoute, useRouter } from "vue-router";
 
 declare module 'pinia' {
@@ -8,11 +8,14 @@ declare module 'pinia' {
     }
 
     export interface DefineStoreOptionsBase<S, Store> {
-        lifecycle?: string[] | string
+        lifecycle?: string[] | boolean
     }
 }
 
-export const piniaLifecycle = ({ options, store }: PiniaPluginContext) => {
+
+
+
+export const piniaLifecycle: PiniaPlugin = ({ options, store }: PiniaPluginContext) => {
     const initEntries = Object.entries(store.$state);
 
     const route = useRoute()
@@ -27,7 +30,7 @@ export const piniaLifecycle = ({ options, store }: PiniaPluginContext) => {
         modules.push(...options.lifecycle)
     }
 
-    if (options.lifecycle == 'module') {
+    if (options.lifecycle == true) {
         modules.push(initPath)
     }
 
