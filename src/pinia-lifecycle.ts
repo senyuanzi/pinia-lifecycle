@@ -1,5 +1,5 @@
 
-import { PiniaPlugin, type PiniaPluginContext } from "pinia";
+import { type PiniaPluginContext } from "pinia";
 import { useRoute, useRouter } from "vue-router";
 
 declare module 'pinia' {
@@ -15,7 +15,7 @@ declare module 'pinia' {
 
 
 
-export const piniaLifecycle: PiniaPlugin = ({ options, store }: PiniaPluginContext) => {
+export const piniaLifecycle = ({ options, store }: PiniaPluginContext) => {
     const initEntries = Object.entries(store.$state);
 
     const route = useRoute()
